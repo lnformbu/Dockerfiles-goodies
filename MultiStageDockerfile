@@ -14,4 +14,5 @@ RUN mvn install
 
 #Tomcat
 FROM tomcat:8.0.20-jre8
+#COPY  /app/target/*war /usr/local/tomcat/webapps/resume.war
 COPY --from=build /app/target/*war /usr/local/tomcat/webapps/
